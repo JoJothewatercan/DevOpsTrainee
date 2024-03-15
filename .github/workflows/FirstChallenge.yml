@@ -7,32 +7,20 @@ jobs:
         name: First job
         runs-on: ubuntu-latest
         steps:
-            - name: step one
-              uses: actions/checkout@v3
-            - name: run a one-line command
-              run:  date
+        - run:  date
     windows:
         name: Second job
         runs-on: windows-latest
         steps:
-            - name: step one
-              uses: actions/checkout@v3
-            - name: run a one-line command
-              run: date
+        - run: date
     macos:
         name: Third job
         runs-on: macos-latest
         steps:
-            - name: step one
-              uses: actions/checkout@v3
-            - name: run a one-line command
-              run: date
+        - run: date
     depends:
         name: Fourth job
         runs-on: ubuntu-latest
         needs: [ubuntu, windows, macos]
         steps:
-            - name: step one
-              uses: actions/checkout@v3
-            - name: run a one-line command
-              run: date
+        - run: date
