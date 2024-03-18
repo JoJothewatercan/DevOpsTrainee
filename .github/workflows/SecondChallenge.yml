@@ -14,6 +14,9 @@ jobs:
             - name: Check out code
               uses: actions/checkout@v1
 
+            - name: Build ${{env.ARTIFACT_NAME}} for ubuntu-latest
+              run: go build ${{env.ARTIFACT_NAME}}.go
+
             - name: Upload artifact
               uses: actions/upload-artifact@v1.0.0
               with:
