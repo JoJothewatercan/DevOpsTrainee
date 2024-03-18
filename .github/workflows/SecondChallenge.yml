@@ -3,7 +3,7 @@ name: Second Challenge
 on: [push]
 
 env:
-    ARTIFACT_NAME: hello-server
+    ARTIFACT_NAME: myartifact
 
 jobs:
     artifact:
@@ -12,13 +12,9 @@ jobs:
         steps:
 
             - name: Check out code
-              uses: actions/checkout@v1
-
-            - name: Build ${{env.ARTIFACT_NAME}} for ubuntu-latest
-              run: go build ${{env.ARTIFACT_NAME}}.go
-
+              uses: actions/checkout@v2
             - name: Upload artifact
-              uses: actions/upload-artifact@v1.0.0
+              uses: actions/upload-artifact@v2
               with:
-                name: linux
-                path: ./${{env.ARTIFACT_NAME}}
+                name: ${{env.ARTIFACT_NAME}}
+                path: .
