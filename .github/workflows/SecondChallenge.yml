@@ -1,6 +1,6 @@
 name: Second Challenge
 
-on: [push]
+on: []
 
 env:
     ARTIFACT_NAME: myartifact
