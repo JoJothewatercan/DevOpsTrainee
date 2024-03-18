@@ -3,7 +3,7 @@ name: Second Challenge
 on: [push]
 
 env:
-    ARTIFACT_NAME: myArtifact
+    ARTIFACT_NAME: hello-server
 
 jobs:
     artifact:
