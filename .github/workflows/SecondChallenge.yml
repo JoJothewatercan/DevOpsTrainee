@@ -1,6 +1,6 @@
 name: Second Challenge
 
-on: []
+on: [push]
 
 env:
     ARTIFACT_NAME: myartifact
@@ -17,4 +17,4 @@ jobs:
               uses: actions/upload-artifact@v2
               with:
                 name: ${{env.ARTIFACT_NAME}}
-                path: .
+                path: ./workflows
